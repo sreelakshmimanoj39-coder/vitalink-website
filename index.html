@@ -13,19 +13,31 @@ body {
     color: #333;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(135deg, #0077b6, #00b4d8);
     color: white;
-    text-align: center;
     padding: 60px 20px;
 }
 
-header h1 {
-    font-size: 40px;
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
-header p {
+.hero-text p {
     font-size: 18px;
 }
 
@@ -40,15 +52,14 @@ header p {
     font-weight: bold;
 }
 
-.hero-img {
-    width: 80%;
-    max-width: 400px;
-    margin-top: 30px;
+.hero img {
+    width: 350px;
     border-radius: 15px;
 }
 
+/* SECTIONS */
 section {
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
@@ -71,11 +82,38 @@ section {
     width: 60px;
 }
 
+/* HOW IT WORKS */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.step {
+    margin: 15px;
+    width: 250px;
+}
+
+/* FOOTER */
 footer {
     background: #023e8a;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -83,25 +121,30 @@ footer {
 <body>
 
 <header>
-    <h1>Vitalink</h1>
-    <p>Making prescriptions simple, safe, and understandable for seniors</p>
-    <a href="#" class="btn">Get Started</a>
+    <div class="hero">
+        
+        <div class="hero-text fade-in">
+            <h1>Confused by prescriptions?</h1>
+            <p>Vitalink makes it simple, safe, and easy for seniors</p>
+            <a href="#" class="btn">Scan Prescription Now</a>
+        </div>
 
-    <br>
-    <img src="hero.jpeg" class="hero-img">
+        <img src="hero.jpeg" class="fade-in">
+        
+    </div>
 </header>
 
-<section>
+<section class="fade-in">
     <h2>🚨 The Problem</h2>
     <p>Elderly people often struggle to understand prescriptions due to complex medical terms and language barriers.</p>
 </section>
 
-<section>
+<section class="fade-in">
     <h2>💡 Our Solution</h2>
     <p>Vitalink scans prescriptions and converts them into simple language with audio and visual guidance.</p>
 </section>
 
-<section>
+<section class="fade-in">
     <h2>✨ Key Features</h2>
     <div class="features">
 
@@ -133,12 +176,32 @@ footer {
     </div>
 </section>
 
-<section>
+<section class="fade-in">
+    <h2>⚙️ How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>1️⃣ Scan</h3>
+            <p>Upload or scan your prescription</p>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Understand</h3>
+            <p>Get simple translation in your language</p>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Follow</h3>
+            <p>Use audio guidance and reminders</p>
+        </div>
+    </div>
+</section>
+
+<section class="fade-in">
     <h2>⭐ Why Choose Vitalink?</h2>
     <p>Designed for seniors, easy to use, and ensures safe medication management without confusion.</p>
 </section>
 
-<section>
+<section class="fade-in">
     <h2>📞 Contact Us</h2>
     <p>Email: support@vitalink.com</p>
     <p>Phone: +91 XXXXX XXXXX</p>
